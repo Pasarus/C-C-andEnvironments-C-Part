@@ -122,6 +122,87 @@ localAssignmentC/fast:
 	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/build
 .PHONY : localAssignmentC/fast
 
+DataCalculations.obj: DataCalculations.c.obj
+
+.PHONY : DataCalculations.obj
+
+# target to build an object file
+DataCalculations.c.obj:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj
+.PHONY : DataCalculations.c.obj
+
+DataCalculations.i: DataCalculations.c.i
+
+.PHONY : DataCalculations.i
+
+# target to preprocess a source file
+DataCalculations.c.i:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/DataCalculations.c.i
+.PHONY : DataCalculations.c.i
+
+DataCalculations.s: DataCalculations.c.s
+
+.PHONY : DataCalculations.s
+
+# target to generate assembly for a file
+DataCalculations.c.s:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/DataCalculations.c.s
+.PHONY : DataCalculations.c.s
+
+ReadInData.obj: ReadInData.c.obj
+
+.PHONY : ReadInData.obj
+
+# target to build an object file
+ReadInData.c.obj:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadInData.c.obj
+.PHONY : ReadInData.c.obj
+
+ReadInData.i: ReadInData.c.i
+
+.PHONY : ReadInData.i
+
+# target to preprocess a source file
+ReadInData.c.i:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadInData.c.i
+.PHONY : ReadInData.c.i
+
+ReadInData.s: ReadInData.c.s
+
+.PHONY : ReadInData.s
+
+# target to generate assembly for a file
+ReadInData.c.s:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadInData.c.s
+.PHONY : ReadInData.c.s
+
+ReadOutData.obj: ReadOutData.c.obj
+
+.PHONY : ReadOutData.obj
+
+# target to build an object file
+ReadOutData.c.obj:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj
+.PHONY : ReadOutData.c.obj
+
+ReadOutData.i: ReadOutData.c.i
+
+.PHONY : ReadOutData.i
+
+# target to preprocess a source file
+ReadOutData.c.i:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadOutData.c.i
+.PHONY : ReadOutData.c.i
+
+ReadOutData.s: ReadOutData.c.s
+
+.PHONY : ReadOutData.s
+
+# target to generate assembly for a file
+ReadOutData.c.s:
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadOutData.c.s
+.PHONY : ReadOutData.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -158,6 +239,15 @@ help:
 	@echo ... localAssignmentC
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... DataCalculations.obj
+	@echo ... DataCalculations.i
+	@echo ... DataCalculations.s
+	@echo ... ReadInData.obj
+	@echo ... ReadInData.i
+	@echo ... ReadInData.s
+	@echo ... ReadOutData.obj
+	@echo ... ReadOutData.i
+	@echo ... ReadOutData.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -4,6 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/localAssignmentC/DataCalculations.c" "C:/localAssignmentC/cmake-build-debug/CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj"
+  "C:/localAssignmentC/ReadInData.c" "C:/localAssignmentC/cmake-build-debug/CMakeFiles/localAssignmentC.dir/ReadInData.c.obj"
+  "C:/localAssignmentC/ReadOutData.c" "C:/localAssignmentC/cmake-build-debug/CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj"
   "C:/localAssignmentC/main.c" "C:/localAssignmentC/cmake-build-debug/CMakeFiles/localAssignmentC.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

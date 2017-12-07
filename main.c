@@ -1,39 +1,6 @@
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
-//#include <ntdef.h>
-#include <math.h>
-
-#define FILE_NAME_MAX 40
-
-typedef struct anObserver{
-    char ID[4]; double latitude; double longitude;
-};
-
-typedef struct aSighting{
-    char ID[4]; char mammalType; double trueNorthBearing; double range;
-};
-
-typedef struct observerDate{
-    int day; int month; int year; int hour; int minute; int seconds;
-};
-
-typedef struct aLocation{
-    double latitude; double longitude;
-};
-
-typedef struct aMammal{
-    char mammalType; struct aLocation location;
-};
-
+#include "MammalSightings.h"
 
 int main() {
-    //Function Declarations ---------------------------------------
-    int findFileLength(FILE*, const fpos_t*);
-    void readInTheDataObserver(FILE*, struct anObserver*);
-    void readInTheDataSighting(FILE*, struct aSighting*);
-    void calculateAllTheMammals(struct aMammal*,struct aSighting*, struct anObserver*, int sizeOfMammals);
-
     //Variable declarations ---------------------------------------
     struct observerDate date;
     char observerFileName[FILE_NAME_MAX], observersFileNamePostCat[FILE_NAME_MAX + 4];
@@ -53,6 +20,7 @@ int main() {
         } else {
             //The file doesn't exist
             fileExists = 0;
+            printf("File doesn't exist try again!");
         }
     } while (!fileExists);
 
@@ -103,118 +71,43 @@ int main() {
     readInTheDataSighting(file, sightings);
 
     //Close the file
-    fclose(file);
+    fclose(file);//
 
     // Locations ------------------------------------------
     //Create an array of mammals equal to one mammal per sighting
     struct aMammal mammals[fileLength];
 
+    calculateAllTheMammals(mammals, sightings, observers, fileLength);
 
+    //Take in the file name and open that file for writing
+    char outputFileName[FILE_NAME_MAX], outputFileNamePostCat[FILE_NAME_MAX + 4] = "../";
+    printf("What file do you want to print the data to?\n");
+    scanf("%s", outputFileName);
 
+    strcat(outputFileNamePostCat, outputFileName);
 
-    return 1;
+    file = fopen(outputFileNamePostCat, "w");
+
+    //Write all the data to the file
+    printMammalsToFile(mammals, file, fileLength);
+
+    fclose(file);
+
+    // Locations within the border ---------------------------
+    //Take file name and open for write
+    char output2FileName[FILE_NAME_MAX], output2FileNamePostCat[FILE_NAME_MAX + 4] = "../";
+    printf("What file do you want to print the data to for within the sea area?\n");
+    scanf("%s", output2FileName);
+
+    strcat(output2FileNamePostCat, output2FileName);
+
+    file = fopen(output2FileNamePostCat, "w");
+
+    //Then write all the data to file if it is within the sea area.
+    printMammalsToFileIfInBorder(mammals, file, fileLength);
+
+    fclose(file);
+
+    //Exit with success
+    return EXIT_SUCCESS;
 };
-
-int findFileLength(FILE *file, const fpos_t *currentPosition){
-    //Will be unable to read in more than 20 characters from a line but it shouldn't be more than roughly 12 anyway
-    char buffer[20];
-    int fileLength = 0;
-    while(fgets(buffer, sizeof(buffer), file)!= NULL){
-        fileLength+=1;
-    }
-    fsetpos(file, currentPosition);
-    return fileLength;
-}
-
-void readInTheDataObserver(FILE *file, struct anObserver *observers){
-    char tempID[4];
-    double tempLong, tempLat;
-    int i = 0;
-    //While not at the end of file scan details
-    while(fscanf(file, "%s %lf %lf", tempID, &tempLong, &tempLat) != EOF){
-        i++;
-
-        //Set current data at pointer to the data in the temps
-        observers->latitude = tempLat;
-        observers->longitude = tempLong;
-        strcpy(observers->ID, tempID);
-
-        //Increment the pointer to the next sets of data.
-        observers++;
-    }
-}
-
-void readInTheDataSighting(FILE *file, struct aSighting *sightings){
-    char tempID[4], tempType;
-    double tempBearing, tempDistance;
-    int i = 0;
-    //While not at the end of file scan details
-    while(fscanf(file, "%s %c %lf %lf", tempID, &tempType, &tempBearing, &tempDistance) != EOF){
-        i++;
-
-        //Set current data at pointer to the data in the temps
-        sightings->trueNorthBearing = tempBearing;
-        sightings->range = tempDistance;
-        strcpy(sightings->ID, tempID);
-        sightings->mammalType = tempType;
-
-        //Increment the pointer to the next sets of data.
-        sightings++;
-    }
-}
-
-void calculateAllTheMammals(struct aMammal *mammals,struct aSighting *sightings, struct anObserver *observers, int sizeOfMammals){
-    //Declare the functions I'll need in this functions
-    struct anObserver findTheObserver(struct aSighting*, struct anObserver*, int);
-    struct aLocation findTheLocation(struct aSighting*, struct anObserver*);
-    //Assign the values for mammal type to each of the mammal structs
-    for (int i = 0; i<sizeOfMammals; i++){
-        mammals->mammalType = sightings->mammalType;
-        struct anObserver theObserver = findTheObserver(sightings, observers, sizeOfMammals);
-        mammals->location = findTheLocation(sightings, &theObserver);
-        mammals++;
-        sightings++;
-    }
-}
-
-struct anObserver findTheObserver (struct aSighting *theSighting, struct anObserver *observers, int sizeOfMammals){
-    struct anObserver theObserver;
-    theObserver.longitude = 0;
-    theObserver.latitude = 0;
-    strcat(theObserver.ID, "0000");
-    for (int i = 0; i<sizeOfMammals; i++){
-        if(theSighting->ID == observers->ID){
-            strcat(theObserver.ID, observers->ID);
-            theObserver.latitude = observers->latitude;
-            theObserver.longitude = observers->longitude;
-            break;
-        }
-        observers++;
-    }
-    return theObserver;
-}
-
-struct aLocation findTheLocation(struct aSighting *theSighting, struct anObserver *theObserver){
-    double olat, olatR, olong,bg, bgr, range, cmLat, cmLong;
-    struct aLocation newLocation;
-
-    //Find the variable values needed ---------------------
-    olat = theObserver->latitude;
-    olong = theObserver->longitude;
-    bg = theSighting->trueNorthBearing;
-    range = theSighting->range;
-
-    //Calculate the rest of the needed variables ----------
-    olatR = olat * M_PI / 180.0;
-    bgr = bg * M_PI / 180.0;
-
-    //Perform the main calculations -----------------------
-    cmLat = olat + (range * cos(bgr)) / 60.0;
-    cmLong = olong + (range * sin(bgr) / cos(olatR)) / 60.0;
-
-    //finish the struct -----------------------------------
-    newLocation.latitude = cmLat;
-    newLocation.longitude = cmLong;
-
-    return newLocation;
-}

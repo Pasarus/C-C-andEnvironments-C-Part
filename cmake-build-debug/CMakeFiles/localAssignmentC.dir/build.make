@@ -80,19 +80,97 @@ CMakeFiles/localAssignmentC.dir/main.c.obj.provides: CMakeFiles/localAssignmentC
 CMakeFiles/localAssignmentC.dir/main.c.obj.provides.build: CMakeFiles/localAssignmentC.dir/main.c.obj
 
 
+CMakeFiles/localAssignmentC.dir/ReadInData.c.obj: CMakeFiles/localAssignmentC.dir/flags.make
+CMakeFiles/localAssignmentC.dir/ReadInData.c.obj: ../ReadInData.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\localAssignmentC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/localAssignmentC.dir/ReadInData.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\localAssignmentC.dir\ReadInData.c.obj   -c C:\localAssignmentC\ReadInData.c
+
+CMakeFiles/localAssignmentC.dir/ReadInData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/localAssignmentC.dir/ReadInData.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\localAssignmentC\ReadInData.c > CMakeFiles\localAssignmentC.dir\ReadInData.c.i
+
+CMakeFiles/localAssignmentC.dir/ReadInData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/localAssignmentC.dir/ReadInData.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\localAssignmentC\ReadInData.c -o CMakeFiles\localAssignmentC.dir\ReadInData.c.s
+
+CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.requires:
+
+.PHONY : CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.requires
+
+CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.provides: CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.requires
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.provides.build
+.PHONY : CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.provides
+
+CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.provides.build: CMakeFiles/localAssignmentC.dir/ReadInData.c.obj
+
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj: CMakeFiles/localAssignmentC.dir/flags.make
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj: ../DataCalculations.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\localAssignmentC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\localAssignmentC.dir\DataCalculations.c.obj   -c C:\localAssignmentC\DataCalculations.c
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/localAssignmentC.dir/DataCalculations.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\localAssignmentC\DataCalculations.c > CMakeFiles\localAssignmentC.dir\DataCalculations.c.i
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/localAssignmentC.dir/DataCalculations.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\localAssignmentC\DataCalculations.c -o CMakeFiles\localAssignmentC.dir\DataCalculations.c.s
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.requires:
+
+.PHONY : CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.requires
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.provides: CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.requires
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.provides.build
+.PHONY : CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.provides
+
+CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.provides.build: CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj
+
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj: CMakeFiles/localAssignmentC.dir/flags.make
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj: ../ReadOutData.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\localAssignmentC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\localAssignmentC.dir\ReadOutData.c.obj   -c C:\localAssignmentC\ReadOutData.c
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/localAssignmentC.dir/ReadOutData.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\localAssignmentC\ReadOutData.c > CMakeFiles\localAssignmentC.dir\ReadOutData.c.i
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/localAssignmentC.dir/ReadOutData.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\localAssignmentC\ReadOutData.c -o CMakeFiles\localAssignmentC.dir\ReadOutData.c.s
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.requires:
+
+.PHONY : CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.requires
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.provides: CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.requires
+	$(MAKE) -f CMakeFiles\localAssignmentC.dir\build.make CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.provides.build
+.PHONY : CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.provides
+
+CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.provides.build: CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj
+
+
 # Object files for target localAssignmentC
 localAssignmentC_OBJECTS = \
-"CMakeFiles/localAssignmentC.dir/main.c.obj"
+"CMakeFiles/localAssignmentC.dir/main.c.obj" \
+"CMakeFiles/localAssignmentC.dir/ReadInData.c.obj" \
+"CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj" \
+"CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj"
 
 # External object files for target localAssignmentC
 localAssignmentC_EXTERNAL_OBJECTS =
 
 localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/main.c.obj
+localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/ReadInData.c.obj
+localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj
+localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj
 localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/build.make
 localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/linklibs.rsp
 localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/objects1.rsp
 localAssignmentC.exe: CMakeFiles/localAssignmentC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\localAssignmentC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable localAssignmentC.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\localAssignmentC\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable localAssignmentC.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\localAssignmentC.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +179,9 @@ CMakeFiles/localAssignmentC.dir/build: localAssignmentC.exe
 .PHONY : CMakeFiles/localAssignmentC.dir/build
 
 CMakeFiles/localAssignmentC.dir/requires: CMakeFiles/localAssignmentC.dir/main.c.obj.requires
+CMakeFiles/localAssignmentC.dir/requires: CMakeFiles/localAssignmentC.dir/ReadInData.c.obj.requires
+CMakeFiles/localAssignmentC.dir/requires: CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj.requires
+CMakeFiles/localAssignmentC.dir/requires: CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj.requires
 
 .PHONY : CMakeFiles/localAssignmentC.dir/requires
 

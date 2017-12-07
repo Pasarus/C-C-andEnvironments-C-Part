@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/localAssignmentC.dir/main.c.obj"
+  "CMakeFiles/localAssignmentC.dir/ReadInData.c.obj"
+  "CMakeFiles/localAssignmentC.dir/DataCalculations.c.obj"
+  "CMakeFiles/localAssignmentC.dir/ReadOutData.c.obj"
   "localAssignmentC.pdb"
   "localAssignmentC.exe"
   "localAssignmentC.exe.manifest"

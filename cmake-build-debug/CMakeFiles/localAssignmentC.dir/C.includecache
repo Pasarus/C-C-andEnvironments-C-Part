@@ -6,11 +6,31 @@
 
 #IncludeRegexTransform: 
 
-C:/localAssignmentC/main.c
+C:/localAssignmentC/DataCalculations.c
+MammalSightings.h
+C:/localAssignmentC/MammalSightings.h
+
+C:/localAssignmentC/MammalSightings.h
 stdio.h
 -
 string.h
 -
 unistd.h
 -
+math.h
+-
+stdlib.h
+-
+
+C:/localAssignmentC/ReadInData.c
+MammalSightings.h
+C:/localAssignmentC/MammalSightings.h
+
+C:/localAssignmentC/ReadOutData.c
+MammalSightings.h
+C:/localAssignmentC/MammalSightings.h
+
+C:/localAssignmentC/main.c
+MammalSightings.h
+C:/localAssignmentC/MammalSightings.h
 

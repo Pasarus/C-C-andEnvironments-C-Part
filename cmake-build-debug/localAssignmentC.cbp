@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/localAssignmentC/DataCalculations.c">
+			<Option target="localAssignmentC"/>
+		</Unit>
+		<Unit filename="C:/localAssignmentC/MammalSightings.h">
+			<Option target="localAssignmentC"/>
+		</Unit>
+		<Unit filename="C:/localAssignmentC/ReadInData.c">
+			<Option target="localAssignmentC"/>
+		</Unit>
+		<Unit filename="C:/localAssignmentC/ReadOutData.c">
+			<Option target="localAssignmentC"/>
+		</Unit>
 		<Unit filename="C:/localAssignmentC/main.c">
 			<Option target="localAssignmentC"/>
 		</Unit>
